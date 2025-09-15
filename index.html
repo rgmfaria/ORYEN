@@ -1,40 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>ORYEN</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
-        <!-- Core theme CSS -->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Background Video-->
-        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
-        <!-- Masthead-->
-        <div class="masthead">
-            <div class="masthead-content text-white">
-                <div class="container-fluid px-4 px-lg-0">
-                    <h1 class="fst-italic lh-1 mb-4">Nosso site estará no ar em breve</h1>
-                    <p class="mb-5">Estamos trabalhando duro para concluir o desenvolvimento. Fique atento!</p>
-                </div>
-            </div>
-        </div>
-        <!-- Social Icons-->
-        <div class="social-icons">
-            <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </body>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ORYEN - Em breve</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0F253E;
+      color: #ffffff;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
+    }
+
+    .center-content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #cfd8dc;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .loader {
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top: 6px solid #00bcd4;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #90a4ae;
+    }
+
+    @media (max-width: 600px) {
+      .logo img {
+        width: 120px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- LOGO NO CANTO ESQUERDO -->
+  <div class="logo">
+    <img src="assets/Logo.png" alt="Logo da Consultoria">
+  </div>
+
+  <!-- CONTEÚDO CENTRAL -->
+  <div class="center-content">
+    <h1>Nosso site estará no ar em breve</h1>
+    <p>Estamos trabalhando duro para concluir o desenvolvimento. Fique atento!</p>
+    <div class="loader"></div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    &copy; 2025 ORYEN. Todos os direitos reservados.
+  </footer>
+</body>
 </html>
