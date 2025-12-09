@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import OryenLogo from "@/components/OryenLogo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,13 +18,8 @@ const Header = () => {
       <div className="container-custom">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Shield className="w-6 h-6 text-primary" />
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">
-              Nexus<span className="text-primary">Risk</span>
-            </span>
+          <a href="#" className="group">
+            <OryenLogo size="md" />
           </a>
 
           {/* Desktop Navigation */}
