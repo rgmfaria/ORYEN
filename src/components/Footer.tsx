@@ -1,4 +1,5 @@
-import { Shield, Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Twitter, Mail } from "lucide-react";
+import OryenLogo from "@/components/OryenLogo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Shield className="w-6 h-6 text-primary" />
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                Nexus<span className="text-primary">Risk</span>
-              </span>
+            <a href="#" className="inline-block mb-6">
+              <OryenLogo size="md" />
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-md mb-6">
               Consultoria especializada em gestão de riscos corporativos e cibernéticos. 
@@ -38,7 +34,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
               <a
-                href="mailto:contato@nexusrisk.com.br"
+                href="mailto:contato@oryen.com.br"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
                 aria-label="Email"
               >
@@ -108,7 +104,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} NexusRisk. Todos os direitos reservados.
+            © {currentYear} ORYEN. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
