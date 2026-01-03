@@ -1,91 +1,73 @@
-import { 
-  Shield, 
-  Search, 
-  FileCheck, 
-  Users, 
-  Lock, 
-  BarChart3,
-  ArrowRight 
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Shield,
-    title: "Gestão de Riscos Cibernéticos",
-    description: "Identificação, avaliação e tratamento de ameaças digitais que podem impactar sua operação.",
+    title: "Strategy and Governance",
+    description: "A cibersegurança como alavanca estratégica de crescimento. Apoiamos a gestão de riscos, governança e conformidade com estratégias integradas que alinham segurança aos objetivos do negócio, impulsionando decisões seguras e crescimento sustentável.",
   },
   {
-    icon: Search,
-    title: "Análise de Vulnerabilidades",
-    description: "Testes de penetração e avaliações técnicas para descobrir pontos fracos antes dos atacantes.",
+    title: "Security Transformation",
+    description: "A transformação em cibersegurança fortalece a proteção, assegura conformidade e prepara a organização para evoluir com confiança. Com tecnologia e expertise setorial, impulsionamos programas que viabilizam a adoção segura de novas tecnologias.",
   },
   {
-    icon: FileCheck,
-    title: "Compliance & Governança",
-    description: "Adequação a regulamentações como LGPD, SOX, PCI-DSS e frameworks como ISO 27001.",
+    title: "Cyber Defense & Resilience",
+    description: "Proteção cibernética proativa que antecipa ameaças, neutraliza riscos e garante a continuidade do negócio. Unimos monitoramento avançado, inteligência analítica e resposta ágil para fortalecer o SOC, modernizar a segurança e preparar sua organização para os desafios cibernéticos atuais e futuros.",
   },
   {
-    icon: Users,
-    title: "Conscientização de Segurança",
-    description: "Programas de treinamento que transformam colaboradores na primeira linha de defesa.",
-  },
-  {
-    icon: Lock,
-    title: "Resposta a Incidentes",
-    description: "Planos estruturados para reagir rapidamente e minimizar impactos de violações de segurança.",
-  },
-  {
-    icon: BarChart3,
-    title: "Continuidade de Negócios",
-    description: "Estratégias para manter operações críticas funcionando mesmo em cenários adversos.",
+    title: "Cyber Managed Services",
+    description: "A transformação estratégica da cibersegurança exige evolução contínua frente a novas ameaças e regulações. Com Cyber Managed Services, apoiamos a segurança, geramos valor e impulsionamos o crescimento com capacidades gerenciadas e tecnologias emergentes.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="servicos" className="section-padding relative">
+    <section id="servicos" className="section-padding relative bg-background">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--primary)/0.05)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--primary)/0.08)_0%,transparent_50%)]" />
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-4">
+        <div className="mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
             Nossos Serviços
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Soluções completas para sua{" "}
-            <span className="gradient-text">proteção</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Oferecemos um portfólio abrangente de serviços de consultoria 
-            para proteger seu negócio contra riscos corporativos e cibernéticos.
-          </p>
+          
+          {/* Introduction */}
+          <div className="max-w-4xl">
+            <p className="text-xl sm:text-2xl font-medium mb-6">
+              Ajudamos você a{" "}
+              <span className="gradient-text">operar com segurança</span> e{" "}
+              <span className="gradient-text">crescer com sucesso</span>.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Projetados para atender a organizações em qualquer etapa de sua jornada, nossas soluções de cibersegurança fornecem as ferramentas e a experiência necessárias para responder rapidamente a mercados em mudança, novas ameaças e concorrências disruptivas.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Ao aproveitar as soluções de Cyber da ORYEN, sua organização pode ir além de se adaptar às mudanças, moldando ativamente o futuro para permanecer resiliente, inovadora e à frente da concorrência.
+            </p>
+          </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Services Grid - 2x2 */}
+        <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="glass-card-hover p-8 group cursor-pointer"
+              className="glass-card-hover p-8 lg:p-10 group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-7 h-7 text-primary" />
-              </div>
-
-              {/* Content */}
-              <h3 className="font-display text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+              {/* Title with gradient */}
+              <h3 className="font-display text-xl sm:text-2xl font-semibold mb-4 gradient-text">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              
+              {/* Description */}
+              <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
                 {service.description}
               </p>
 
-              {/* Link */}
-              <div className="flex items-center gap-2 text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              {/* Hover Link */}
+              <div className="flex items-center gap-2 text-primary font-medium mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
                 <span>Saiba mais</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
