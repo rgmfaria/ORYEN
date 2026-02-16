@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Lock, Eye } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -13,52 +13,58 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
 
       <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 mb-8">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground font-medium">
-              Consultoria Especializada em Riscos Corporativos
-            </span>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div>
+            {/* Badge */}
+            <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 mb-8">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm text-muted-foreground font-medium">
+                Cyber Advisory & Risk Governance
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="animate-fade-up-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+              Ajudamos você a operar com{" "}
+              <span className="gradient-text">segurança</span>{" "}
+              e crescer com{" "}
+              <span className="gradient-text">sucesso</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="animate-fade-up-delay-2 text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
+              Nossas soluções de cibersegurança fornecem as ferramentas e a experiência necessárias 
+              para responder rapidamente a mercados em mudança, novas ameaças e concorrências disruptivas.
+            </p>
+
+            {/* CTAs */}
+            <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-start gap-4">
+              <Button variant="hero" size="xl" asChild>
+                <a href="#contato">
+                  Fale Conosco
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild>
+                <a href="#sobre">Conheça a ORYEN</a>
+              </Button>
+            </div>
           </div>
 
-          {/* Headline */}
-          <h1 className="animate-fade-up-delay-1 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            Proteja seu negócio com{" "}
-            <span className="gradient-text">inteligência</span>{" "}
-            e estratégia
-          </h1>
-
-          {/* Subheadline */}
-          <p className="animate-fade-up-delay-2 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Somos especialistas em identificar, avaliar e mitigar riscos cibernéticos 
-            e corporativos. Transformamos vulnerabilidades em vantagens competitivas.
-          </p>
-
-          {/* CTAs */}
-          <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl">
-              Agende uma Consultoria
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="heroOutline" size="xl">
-              Conheça Nossos Serviços
-            </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="animate-fade-up mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto" style={{ animationDelay: '0.5s' }}>
-            <div className="flex flex-col items-center gap-2">
-              <Shield className="w-6 h-6 text-primary" />
-              <span className="text-sm text-muted-foreground">ISO 27001</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Lock className="w-6 h-6 text-primary" />
-              <span className="text-sm text-muted-foreground">LGPD</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Eye className="w-6 h-6 text-primary" />
-              <span className="text-sm text-muted-foreground">SOC 2</span>
+          {/* Visual Element - Abstract Shield */}
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="relative">
+              {/* Outer ring */}
+              <div className="w-80 h-80 rounded-full border border-primary/20 flex items-center justify-center animate-float">
+                <div className="w-60 h-60 rounded-full border border-primary/30 flex items-center justify-center">
+                  <div className="w-40 h-40 rounded-full bg-primary/10 backdrop-blur-xl flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-primary/20" />
+                  </div>
+                </div>
+              </div>
+              {/* Glow */}
+              <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
