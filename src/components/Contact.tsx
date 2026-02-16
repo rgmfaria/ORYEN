@@ -43,9 +43,8 @@ const Contact = () => {
               sobre seu projeto
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Estamos prontos para ajudar sua empresa a alcançar um novo patamar 
-              de segurança e conformidade. Entre em contato e descubra como 
-              podemos proteger seu negócio.
+              Estamos prontos para ajudar sua organização a estruturar governança 
+              de risco digital e fortalecer resiliência institucional.
             </p>
 
             {/* Contact Details */}
@@ -56,7 +55,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="text-foreground font-medium">contato@nexusrisk.com.br</div>
+                  <div className="text-foreground font-medium">info@oryen.com.br</div>
                 </div>
               </div>
 
@@ -66,7 +65,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Telefone</div>
-                  <div className="text-foreground font-medium">+55 (11) 4000-0000</div>
+                  <div className="text-foreground font-medium">+55 (11) 9 9330-6888</div>
                 </div>
               </div>
 

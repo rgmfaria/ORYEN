@@ -1,13 +1,10 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const differentials = [
-  "Equipe com certificações internacionais (CISSP, CISM, CEH)",
-  "Metodologias alinhadas aos principais frameworks globais",
-  "Abordagem personalizada para cada setor de atuação",
-  "Relatórios executivos claros e acionáveis",
-  "Suporte contínuo pós-implementação",
-  "Experiência comprovada em grandes corporações",
+const highlights = [
+  "Integração entre risco digital e agenda executiva.",
+  "Modelos de governança orientados à decisão.",
+  "Clareza estratégica para conselhos e C-Level.",
 ];
 
 const About = () => {
@@ -24,20 +21,17 @@ const About = () => {
               Sobre Nós
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Expertise que{" "}
-              <span className="gradient-text">transforma</span>{" "}
-              riscos em oportunidades
+              Onde risco digital e{" "}
+              <span className="gradient-text">estratégia</span>{" "}
+              se encontram
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              A NexusRisk nasceu da visão de profissionais com mais de duas décadas 
-              de experiência em gestão de riscos corporativos. Nossa missão é democratizar 
-              o acesso a consultoria de alto nível, oferecendo soluções que antes eram 
-              exclusivas das maiores empresas do mercado.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A ORYEN nasce para atuar onde risco digital, governança e estratégia de negócio se encontram — falando a linguagem da liderança executiva e do conselho.
             </p>
 
-            {/* Differentials List */}
+            {/* Highlights */}
             <div className="space-y-4 mb-8">
-              {differentials.map((item) => (
+              {highlights.map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground">{item}</span>
@@ -45,54 +39,27 @@ const About = () => {
               ))}
             </div>
 
-            <Button variant="hero" size="lg">
-              Conheça Nossa Equipe
+            <Button variant="hero" size="lg" asChild>
+              <a href="#contato">Fale com um Advisor</a>
             </Button>
           </div>
 
-          {/* Visual Element */}
-          <div className="relative">
-            <div className="glass-card p-8 md:p-12">
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center p-6 rounded-xl bg-secondary/30">
-                  <div className="font-display text-4xl font-bold gradient-text mb-2">
-                    20+
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    Anos de Experiência
-                  </div>
-                </div>
-                <div className="text-center p-6 rounded-xl bg-secondary/30">
-                  <div className="font-display text-4xl font-bold gradient-text mb-2">
-                    15+
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    Especialistas
-                  </div>
-                </div>
-                <div className="text-center p-6 rounded-xl bg-secondary/30">
-                  <div className="font-display text-4xl font-bold gradient-text mb-2">
-                    12
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    Setores Atendidos
-                  </div>
-                </div>
-                <div className="text-center p-6 rounded-xl bg-secondary/30">
-                  <div className="font-display text-4xl font-bold gradient-text mb-2">
-                    5
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    Países de Atuação
-                  </div>
-                </div>
-              </div>
+          {/* Right Column */}
+          <div>
+            <div className="glass-card p-8 md:p-10">
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Em um ambiente de crescente complexidade regulatória e transformação digital acelerada, o risco cibernético deixou de ser um tema técnico e passou a ocupar o centro da agenda corporativa.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Atuamos como advisor independente, apoiando organizações a estruturar governança de risco digital, fortalecer resiliência institucional e sustentar crescimento com previsibilidade.
+              </p>
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 border border-primary/20 rounded-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-primary/10 rounded-2xl" />
+            <div className="relative mt-4">
+              <div className="absolute -top-8 -right-4 w-24 h-24 border border-primary/20 rounded-2xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-primary/10 rounded-2xl" />
+            </div>
           </div>
         </div>
       </div>
